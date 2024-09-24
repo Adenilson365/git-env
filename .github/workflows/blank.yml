@@ -22,4 +22,4 @@ jobs:
       steps:
         - name: exibir valor
           run: |
-            echo "${{ needs.valores_output.output-shell }}"
+            echo "${{ needs.valores_output.outputs.output-shell }}"
