@@ -5,11 +5,18 @@ on:
 jobs:
     valores_output:
       runs-on: ubuntu-latest
+      outputs:
+        output-shell: ${{ steps.ex-output.outputs.action_random }}
+        output-dois: ${{ steps.ex-output.outputs.action_random }}
       steps:
         - name: Output Shell
           id: ex-output
           run: |
             ACTION_RANDOM=$(( $RANDOM ))
             echo action_random=$ACTION_RANDOM >> $GITHUB_OUTPUT
-        - name: Exibir output
-          run: echo "${{ steps.ex-output.outputs.action_random }}"
+    exibir_output:
+      runs-on: ubuntu-latest
+      steps:
+        - name: exibir valor
+          run: |
+            echo ${{ output_shell }}
