@@ -14,7 +14,7 @@ jobs:
             id: set-result
             with:
                 script: |
-                  github.rest.issues.createComent({
+                  github.rest.issues.createComment({
                     issue_number: context.issue.number,
                     owner: context.repo.owner,
                     repo: context.repo.repo,
