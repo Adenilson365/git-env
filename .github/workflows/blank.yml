@@ -26,7 +26,7 @@ on:
             - Produção
 jobs:
     valores_input:
-      runs_on: ubuntu-latest
+      runs-on: ubuntu-latest
       steps:
         - name: Contexto Completo
           run: echo "${{ toJson(inputs) }}"
