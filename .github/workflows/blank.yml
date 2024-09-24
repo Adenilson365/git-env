@@ -13,8 +13,8 @@ jobs:
       - name: Gera o artefato
         run: |
           pwd
-          echo "Teste de arquivo" >> ./artefatos/arquivo.txt
-          echo "Teste de arquivo2" >> ./artefatos/arquivo2.txt
+          echo "Teste de arquivo" > ./artefatos/arquivo.txt
+          echo "Teste de arquivo2" > ./artefatos/arquivo2.txt
           ls
           pwd
           whoami
