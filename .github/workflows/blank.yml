@@ -12,6 +12,7 @@ jobs:
         run: ls
       - name: Gera o artefato
         run: |
+          mkdir -p ./artefatos
           pwd
           echo "Teste de arquivo" > ./artefatos/arquivo.txt
           echo "Teste de arquivo2" > ./artefatos/arquivo2.txt
