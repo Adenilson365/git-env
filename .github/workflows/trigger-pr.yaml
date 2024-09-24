@@ -2,6 +2,7 @@ name: trigger pr
 on:
     pull_request:
         branches: ["main"]
+        types: closed
 jobs:
     teste_pr:
         permissions: write-all
