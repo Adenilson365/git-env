@@ -15,6 +15,7 @@ jobs:
             ACTION_RANDOM=$(( $RANDOM ))
             echo action_random=$ACTION_RANDOM >> $GITHUB_OUTPUT
     exibir_output:
+      needs: [valores_output]
       runs-on: ubuntu-latest
       steps:
         - name: exibir valor
