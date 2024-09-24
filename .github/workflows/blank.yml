@@ -20,4 +20,4 @@ jobs:
       steps:
         - name: exibir valor
           run: |
-            echo ${{ output_shell }}
+            echo ${{ needs.valores_output.output_shell }}
