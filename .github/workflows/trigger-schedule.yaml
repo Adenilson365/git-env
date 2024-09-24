@@ -1,10 +1,11 @@
 name: schedule
 on:
     schedule:
-        - cron: */2 * * * *
+        - cron: "*/2 * * * *"
 jobs:
-    runs-on: ubuntu-latest
+    
     imprime:
+        runs-on: ubuntu-latest
         steps:
         - name: Imprime uma mensagem
           run:  echo "Mensagem"
