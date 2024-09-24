@@ -1,4 +1,4 @@
-name: Outro Job
+name: workflow-dispatch
 run-name: Estudo Artifact , executador por ${{ github.actor }}
 on: 
   workflow_dispatch:

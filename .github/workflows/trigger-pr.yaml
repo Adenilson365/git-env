@@ -1,0 +1,22 @@
+name: trigger pr
+on:
+    pull_request:
+        branches: ["main"]
+jobs:
+    teste_pr:
+        permissions: write-all
+        runs-on: ubuntu-latest
+        steps:
+          - name: Action Teste
+            run: echo "Action executada apenas em PR"
+          - name: Alteração no card
+            uses: actions/github-script@v7
+            id: set-result
+            with:
+                script: |
+                  github.rest.issues.createComent({
+                    issue_number: context.issue.number,
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    body: 'Comentário adicionado no PR via Actions'
+                  })
