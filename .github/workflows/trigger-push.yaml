@@ -1,7 +1,8 @@
 name: workflow-dispatch
 run-name: Estudo Artifact , executador por ${{ github.actor }}
 on: 
-  push:
+  push: 
+    branches: [teste]
 jobs:
   upload-artifact:
     runs-on: ubuntu-latest
