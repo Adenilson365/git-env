@@ -1,0 +1,10 @@
+name: Outro Job
+run-name: Estudo Artifact , executador por ${{ github.actor }}
+on: 
+  workflow_dispatch:
+jobs:
+  upload-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: listagem de arquivos
+        run: echo "Outro Job"
