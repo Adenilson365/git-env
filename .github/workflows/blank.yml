@@ -1,10 +1,21 @@
 name: Artifacts
 run-name: Estudo Artifact , executador por ${{ github.actor }}
 on: 
+<<<<<<< HEAD
+    push:
+        branches: [main]
+    workflow_dispatch:
+=======
   workflow_dispatch:
 env:
   ARTIFACT_NAME: "artefato-teste"
+>>>>>>> d716862354d1e69c1e587a132621a850855bbaad
 jobs:
+<<<<<<< HEAD
+  runs-on: ubuntu-latest
+  steps:
+    - name: Input 
+=======
   upload-artifact:
     runs-on: ubuntu-latest
     steps:
@@ -43,6 +54,7 @@ jobs:
           name: ${{ env.ARTIFACT_NAME }} # precisa ser o mesmo nome do upload
       - name: Listagem pos upload
         run: ls
+>>>>>>> d716862354d1e69c1e587a132621a850855bbaad
 
 
 
