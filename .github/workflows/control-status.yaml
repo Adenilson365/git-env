@@ -1,0 +1,23 @@
+name: Workflow Evento
+on:
+    workflow_dispatch:
+jobs:
+    Falha:
+        name: Só executa na branch main
+        runs-on: ubuntu-latest
+        steps:
+            - name: Execução com erro
+              run: "ech erro"
+            - name: Execução pos erro
+              if: ${{ failure() }}
+              run: echo "Houve falha"
+    Pos-falha:
+        name: Executa apos falha
+        runs-on: ubuntu-latest
+        needs: [Falha]
+        if: ${{ failure() }}
+        steps:
+            - name: Execução com Sucesso
+              run: echo "Execução de fluxo"
+
+    
