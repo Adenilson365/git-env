@@ -1,0 +1,15 @@
+name: Concorrencia-cancel
+run-name: Workflow Concorrência ${{ github.run_number }}
+on:
+    workflow_dispatch:
+concurrency:
+    group: ${{ github.ref }}-${{ github.workflow }}
+    cancel-in-progress: true
+jobs:
+    ex-fluxo-execucao-01:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Execução do job
+              run: |
+                sleep 120;
+                echo "Action Executada"
