@@ -1,4 +1,4 @@
-name: Execucao-Status
+name: Execucao-matrix
 on:
     workflow_dispatch:
 jobs:
