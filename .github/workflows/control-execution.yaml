@@ -9,3 +9,6 @@ jobs:
         steps:
             - name: Executando na main
               run: "echo Executa na Main"
+            - name: Verifica o actor
+              if: ${{ contains( github.actor, 'Adenilson385') }}
+              run: echo "${{ github.actor }} - Adenilson385"
