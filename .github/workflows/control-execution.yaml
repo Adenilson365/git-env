@@ -1,0 +1,11 @@
+name: Workflow Evento
+on:
+    push:
+jobs:
+    apenas_main:
+        if: ${{ github.ref == 'refs/heads/main' }}
+        name: Só executa na branch main
+        runs-on: ubuntu-latest
+        steps:
+            - name: Executando na main
+              run: "echo Executa na Main"
