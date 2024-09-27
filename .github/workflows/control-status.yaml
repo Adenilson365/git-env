@@ -7,10 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Execução com erro
-              run: "ech erro"
-            - name: Execução pos erro
-              if: ${{ failure() }}
-              run: echo "Houve falha"
+              run: l
     Pos-falha:
         name: Executa apos falha
         runs-on: ubuntu-latest
