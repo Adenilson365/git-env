@@ -1,6 +1,7 @@
 name: Execucao-Condicional
 on:
     push:
+        branches: ["feature"]
 jobs:
     apenas_main:
         if: ${{ github.ref == 'refs/heads/main' }}
