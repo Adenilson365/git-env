@@ -1,0 +1,22 @@
+name: Concorrencia-Job
+run-name: Workflow Concorrência ${{ github.run_number }}
+on:
+    workflow_dispatch:
+jobs:
+    ex-fluxo-execucao-01:
+        concurrency: no
+        runs-on: ubuntu-latest
+        steps:
+            - name: Execução do job
+              run: |
+                sleep 120;
+                echo "Action Executada"
+    ex-fluxo-execucao-02:
+        concurrency: no
+        runs-on: ubuntu-latest
+        needs: [ex-fluxo-execucao-01]
+        steps:
+            - name: Execução do job
+              run: |
+                sleep 120;
+                echo "Action Executada"
